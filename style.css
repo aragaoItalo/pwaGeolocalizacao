@@ -1,4 +1,17 @@
+nav {
+    background-color: blueviolet;
+}
+
 .brand-logo{
     margin-left: 25px;
+}
+
+h1, p {
+    text-align: center;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
 }
 
