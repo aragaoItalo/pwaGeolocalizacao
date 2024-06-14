@@ -41,3 +41,15 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('getLocation').addEventListener('click', showLocation);
     document.getElementById('getLocationMobile').addEventListener('click', showLocation);
 });
+
+// Código para registrar o service worker
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+            console.log('Registro do ServiceWorker bem-sucedido: ', registration.scope);
+        }, function(err) {
+            console.log('Registro do ServiceWorker falhou: ', err);
+        });
+    });
+}
+
